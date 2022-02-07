@@ -1,0 +1,2 @@
+wajib install Reactnvaigation untuk melakukan pindah halaman detail di documentation
+wajib install yarn add @react-navigation/native-stack setelahnya
