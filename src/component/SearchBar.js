@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -24,12 +25,14 @@ const SearchBar = () => {
           style={styles.searchIcon}
         />
       </View>
-      <View>
-        <Image
-          source={require('../assets/icon/promo.png')}
-          style={styles.iconPromo}
-        />
-      </View>
+      <TouchableOpacity>
+        <View>
+          <Image
+            source={require('../assets/icon/promo.png')}
+            style={styles.iconPromo}
+          />
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };

@@ -8,13 +8,13 @@ import SearchBar from '../../../component/SearchBar';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-export default function Home({onPress}) {
+export default function Home({onPress, onPress1}) {
   return (
     <View style={styles.main}>
       <ScrollView>
         <View style={styles.content}>
           <SearchBar />
-          <Gopay />
+          <Gopay onPress={onPress1} />
           <Menu />
           <News link="https://placeimg.com/816/315/tech" />
           {/* <News link="https://placeimg.com/800/345/tech" /> */}

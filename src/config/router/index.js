@@ -4,11 +4,17 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {Text, Button, View} from 'react-native';
 import Home from '../../containers/pages/Home';
 import Navigation from '../../component/Navigation';
+import Pay from '../../containers/pages/Payment';
 
 const Stack = createNativeStackNavigator();
 
 function HomeScreen({navigation}) {
-  return <Home onPress={() => navigation.navigate('Order')} />;
+  return (
+    <Home
+      onPress={() => navigation.navigate('Order')}
+      onPress1={() => navigation.navigate('Payment')}
+    />
+  );
 }
 
 function Order({navigation}, {onPress}) {
@@ -26,6 +32,10 @@ function Order({navigation}, {onPress}) {
   );
 }
 
+const Payment = ({navigation}) => {
+  return <Pay />;
+};
+
 function Router(props) {
   return (
     <NavigationContainer>
@@ -39,6 +49,11 @@ function Router(props) {
           name="Order"
           component={Order}
           options={{title: 'My Home Page', headerShown: false}}
+        />
+        <Stack.Screen
+          name="Payment"
+          component={Payment}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

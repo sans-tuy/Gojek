@@ -6,10 +6,11 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 
-const Gopay = () => {
+const Gopay = ({onPress}) => {
   return (
     <View>
       <View style={styles.gopay}>
@@ -20,22 +21,30 @@ const Gopay = () => {
         <Text style={styles.money}>Rp 50.000</Text>
       </View>
       <View style={styles.gopayItems}>
-        <View style={styles.gopayItem}>
-          <Image source={require('../assets/icon/pay.png')} />
-          <Text style={styles.gopayItemText}>Pay</Text>
-        </View>
-        <View style={styles.gopayItem}>
-          <Image source={require('../assets/icon/nearby.png')} />
-          <Text style={styles.gopayItemText}>Nearby</Text>
-        </View>
-        <View style={styles.gopayItem}>
-          <Image source={require('../assets/icon/topup.png')} />
-          <Text style={styles.gopayItemText}>Top Up</Text>
-        </View>
-        <View style={styles.gopayItem}>
-          <Image source={require('../assets/icon/more.png')} />
-          <Text style={styles.gopayItemText}>More</Text>
-        </View>
+        <TouchableOpacity onPress={onPress}>
+          <View style={styles.gopayItem} onPress={onPress}>
+            <Image source={require('../assets/icon/pay.png')} />
+            <Text style={styles.gopayItemText}>Pay</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.gopayItem}>
+            <Image source={require('../assets/icon/nearby.png')} />
+            <Text style={styles.gopayItemText}>Nearby</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.gopayItem}>
+            <Image source={require('../assets/icon/topup.png')} />
+            <Text style={styles.gopayItemText}>Top Up</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.gopayItem}>
+            <Image source={require('../assets/icon/more.png')} />
+            <Text style={styles.gopayItemText}>More</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -15,56 +16,80 @@ const Menu = () => {
   return (
     <View>
       <View style={styles.Menu}>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-ride.png')} />
+        {/* Go-Ride */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-ride.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-RIDE</Text>
           </View>
-          <Text style={styles.textMenu}>GO-RIDE</Text>
-        </View>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-car.png')} />
+        </TouchableOpacity>
+        {/* Go-Car */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-car.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-CAR</Text>
           </View>
-          <Text style={styles.textMenu}>GO-CAR</Text>
-        </View>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-bluebird.png')} />
+        </TouchableOpacity>
+        {/* Go-Bluebird */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-bluebird.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-BLUEBIRD</Text>
           </View>
-          <Text style={styles.textMenu}>GO-BLUEBIRD</Text>
-        </View>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-food.png')} />
+        </TouchableOpacity>
+        {/* Go-Food */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-food.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-FOOD</Text>
           </View>
-          <Text style={styles.textMenu}>GO-FOOD</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.Menu}>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-send.png')} />
+        {/* Go-Send */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-send.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-SEND</Text>
           </View>
-          <Text style={styles.textMenu}>GO-SEND</Text>
-        </View>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-deals.png')} />
+        </TouchableOpacity>
+        {/* Go-Deals */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-deals.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-DEALS</Text>
           </View>
-          <Text style={styles.textMenu}>GO-DEALS</Text>
-        </View>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-pulsa.png')} />
+        </TouchableOpacity>
+        {/* Go-Pulsa */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-pulsa.png')} />
+            </View>
+            <Text style={styles.textMenu}>GO-PULSA</Text>
           </View>
-          <Text style={styles.textMenu}>GO-PULSA</Text>
-        </View>
-        <View style={styles.MenuItems}>
-          <View style={styles.iconMenu}>
-            <Image source={require('../assets/icon/go-more.png')} />
+        </TouchableOpacity>
+        {/* More */}
+        <TouchableOpacity>
+          <View style={styles.MenuItems}>
+            <View style={styles.iconMenu}>
+              <Image source={require('../assets/icon/go-more.png')} />
+            </View>
+            <Text style={styles.textMenu}>MORE</Text>
           </View>
-          <Text style={styles.textMenu}>MORE</Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.separator}></View>
     </View>
